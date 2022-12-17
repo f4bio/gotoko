@@ -3,7 +3,7 @@ package fakers
 import (
 	"time"
 
-	"github.com/bxcodec/faker/v3"
+	"github.com/go-faker/faker/v4"
 
 	"github.com/gieart87/gotoko/app/models"
 	"github.com/google/uuid"

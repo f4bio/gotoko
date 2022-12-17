@@ -10,7 +10,7 @@ import (
 )
 
 func (server *Server) Products(w http.ResponseWriter, r *http.Request) {
-	render := render.New(render.Options{
+	renderEngine := render.New(render.Options{
 		Layout: "layout",
 	})
 
@@ -35,7 +35,7 @@ func (server *Server) Products(w http.ResponseWriter, r *http.Request) {
 		CurrentPage: int32(page),
 	})
 
-	_ = render.HTML(w, http.StatusOK, "products", map[string]interface{}{
+	_ = renderEngine.HTML(w, http.StatusOK, "products", map[string]interface{}{
 		"products":   products,
 		"pagination": pagination,
 	})

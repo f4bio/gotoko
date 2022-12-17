@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+
+  db:
+    image: postgres:latest
+    container_name: "postgres"
+    restart: "no"
+    environment:
+      POSTGRES_USER: "leet"
+      POSTGRES_PASSWORD: "leet"
+      POSTGRES_DB: "leet"
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer:latest
+    container_name: "adminer"
+    restart: "no"
+    ports:
+      - "8080:8080"

@@ -8,7 +8,7 @@ import (
 
 	"github.com/gosimple/slug"
 
-	"github.com/bxcodec/faker/v3"
+	"github.com/go-faker/faker/v4"
 
 	"github.com/google/uuid"
 
